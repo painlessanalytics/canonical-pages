@@ -33,6 +33,12 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
+## [0.0.3] - 2025-04-18
+Release on WordPress.org
+
+- Added .github workflow actions
+- Added .wordpress-org folder for wordpress.org assets
+
 ## [0.0.3] - 2025-04-12
 Issues addressed for wordpress.org submission review process
 
