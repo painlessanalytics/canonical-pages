@@ -11,7 +11,7 @@
  * Plugin Name:       Canonical Pages
  * Plugin URI:        https://www.painlessanalytics.com/canonical-pages-wordpress-plugin/
  * Description:       Quickly add the canonical meta tag and customize the url.
- * Version:           0.0.3
+ * Version:           0.0.4
  * Requires at least: 6.0
  * Tested up to:      6.7
  * Requires PHP:      7.4
@@ -27,8 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // Define plugin paths
 define( 'CANONICAL_PAGES_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'CANONICAL_PAGES_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'CANONICAL_PAGES_VERSION', '0.0.3');
-
+define( 'CANONICAL_PAGES_VERSION', '0.0.4');
 if( !class_exists('canonicalPages') ) {
     require_once CANONICAL_PAGES_PLUGIN_PATH . 'canonical-pages.class.php';
 
