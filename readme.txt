@@ -3,9 +3,9 @@ Contributors: amandato, painlessanalytics
 Tags: canonical, canonicalization, canonical url, urls, seo
 Donate link: https://www.painlessanalytics.com
 Requires at least: 6.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 0.0.4
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,11 @@ Yes, for the SEO plugins supported. Please see the list of supported SEO plugins
 1. Canonical options during page editing
 
 == Changelog ==
+
+= 1.0 =
+Released on 2025-04-19
+
+Official release of plugin
 
 = 0.0.4 =
 Released on 2025-04-18
