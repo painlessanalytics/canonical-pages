@@ -172,7 +172,12 @@ class canonicalPages {
             return;
         }
 
-        $wp_query = $new_query;
+        // Point the main query, the canonical query, and the post globals at
+        // the base post so template tags and SEO plugins resolve correctly.
+        $wp_query                      = $new_query;
+        $GLOBALS['wp_the_query']       = $new_query;
+        $GLOBALS['post']               = get_post( $baseId );
+        setup_postdata( $GLOBALS['post'] );
         status_header( 200 );
 
         $this->variantUtmSource = $variant;

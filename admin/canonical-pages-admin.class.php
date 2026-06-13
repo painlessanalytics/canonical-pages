@@ -118,6 +118,7 @@
                     <tr>
                         <th scope="row"><?php esc_html_e( 'UTM Source Variants', 'canonical-pages' ); ?></th>
                         <td>
+                            <input type="hidden" name="<?php echo esc_attr( CANONICAL_PAGES_UTM_OPTION ); ?>" value="0" />
                             <label for="<?php echo esc_attr( CANONICAL_PAGES_UTM_OPTION ); ?>">
                                 <input
                                     type="checkbox"
