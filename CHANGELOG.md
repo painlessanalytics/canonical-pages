@@ -33,6 +33,16 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
+## [1.1.0] - 2026-06-13
+Added the "UTM Source Variants" feature
+
+- Added a plugin settings page under Settings > Canonical Pages
+  - Added the "Variant Canonical Pages to UTM Sources" setting (disabled by default)
+- Added the "Canonical UTM Sources" custom post type to manage lists of slug values (one per line)
+- Added a "Variant UTM List" dropdown to the page editor when "This Link" is selected
+- Variant paths now load the base page while keeping the base page as the canonical URL
+- Exposed the matched variant value to analytics as `window.utm_source` and a `dataLayer` push
+
 ## [1.0.2] - 2026-05-24
 Official release of plugin
 
