@@ -98,7 +98,9 @@
      * sanitizeUtmOption($value)
      */
     public function sanitizeUtmOption( $value ) {
-        return ! empty( $value ) ? '1' : '';
+        // Return an actual boolean to match the option's registered type.
+        // Note: empty('0') is true, so the hidden "0" field yields false.
+        return ! empty( $value );
     }
 
     /**

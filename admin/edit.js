@@ -33,7 +33,10 @@ const canonicalPagesSettings = () => {
         return records || [];
     }, []);
 
-    const enableCanonicalPages = meta && meta['_canonical_pages'] ? meta['_canonical_pages'] : true;
+    // The '_canonical_pages' meta is registered with a default of true, so read it
+    // directly. Using a truthiness fallback here would turn an explicit false back
+    // into true and prevent a disabled state from being saved.
+    const enableCanonicalPages = meta && meta['_canonical_pages'] !== undefined ? meta['_canonical_pages'] : true;
     const canonicalPagesOption = meta && meta['_canonical_pages_meta'] && meta['_canonical_pages_meta'].option ? meta['_canonical_pages_meta'].option : 'this';
     const canonicalPagesUrl = meta && meta['_canonical_pages_meta'] && meta['_canonical_pages_meta'].url ? meta['_canonical_pages_meta'].url : '';
     const canonicalPagesVariant = meta && meta['_canonical_pages_meta'] && meta['_canonical_pages_meta'].variant ? meta['_canonical_pages_meta'].variant : 0;
