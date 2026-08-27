@@ -151,7 +151,7 @@
                                 <?php esc_html_e( 'Variant Canonical Pages to UTM Sources', 'canonical-pages' ); ?>
                             </label>
                             <p class="description">
-                                <?php esc_html_e( 'When enabled, you can manage lists of "Canonical UTM Sources" and map a list to any page that uses the "This Link" canonical option. Each value in the list becomes an additional path that loads the same page. For example, if the page is example.com/pizza/ and the list contains "pepperoni" and "mushroom", then example.com/pizza/pepperoni/ and example.com/pizza/mushroom/ will load the pizza page while keeping example.com/pizza/ as the canonical URL. The matched value is also exposed to analytics as a UTM source.', 'canonical-pages' ); ?>
+                                <?php esc_html_e( 'When enabled, you can manage lists of "Canonical UTM Sources" and map a list to any page that uses the "This Link" canonical option. Each value in the list becomes an additional path that loads the same page. For example, if the page is example.com/pizza/ and the list contains "pepperoni" and "mushroom", then example.com/pizza/pepperoni/ and example.com/pizza/mushroom/ will load the pizza page while keeping example.com/pizza/ as the canonical URL.', 'canonical-pages' ); ?>
                             </p>
                         </td>
                     </tr>
