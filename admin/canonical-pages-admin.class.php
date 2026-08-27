@@ -68,11 +68,27 @@
 
     /**
      * registerSettingsPage()
+     *
+     * Registers the top-level "Canonical Pages" menu. Settings is its default
+     * page so the feature can always be toggled here; the "UTM Sources" post
+     * type nests under this menu when the feature is enabled (via show_in_menu).
      */
     public function registerSettingsPage() {
-        add_options_page(
+        add_menu_page(
             __( 'Canonical Pages', 'canonical-pages' ),
             __( 'Canonical Pages', 'canonical-pages' ),
+            'manage_options',
+            'canonical-pages',
+            array( $this, 'renderSettingsPage' ),
+            'dashicons-admin-links',
+            80
+        );
+
+        // Rename the auto-generated first submenu item to "Settings"
+        add_submenu_page(
+            'canonical-pages',
+            __( 'Canonical Pages Settings', 'canonical-pages' ),
+            __( 'Settings', 'canonical-pages' ),
             'manage_options',
             'canonical-pages',
             array( $this, 'renderSettingsPage' )
