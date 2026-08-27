@@ -33,7 +33,7 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
-## [1.1.0] - 2026-06-13
+## [1.1.0] - 2026-08-27
 Added the "UTM Source Variants" feature
 
 - Added a plugin settings page under Settings > Canonical Pages

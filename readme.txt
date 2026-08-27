@@ -84,7 +84,7 @@ Yes, for the SEO plugins supported. Please see the list of supported SEO plugins
 == Changelog ==
 
 = 1.1.0 =
-Released on 2026-06-13
+Released on 2026-08-27
 
 Added the "UTM Source Variants" feature. Enable it under Settings > Canonical Pages to manage "Canonical UTM Sources" lists and map a list to any "This Link" page.
 
