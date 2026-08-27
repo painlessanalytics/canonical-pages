@@ -88,6 +88,8 @@ Released on 2026-08-27
 
 Added the "UTM Source Variants" feature. Enable it under Settings > Canonical Pages to manage "Canonical UTM Sources" lists and map a list to any "This Link" page.
 
+Plugin tested with WordPress 7.1.
+
 = 1.0.2 =
 Released on 2026-05-24
 

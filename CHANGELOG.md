@@ -42,6 +42,7 @@ Added the "UTM Source Variants" feature
 - Added a "Variant UTM List" dropdown to the page editor when "This Link" is selected
 - Variant paths now load the base page while keeping the base page as the canonical URL
 - Exposed the matched variant value to analytics as `window.utm_source` and a `dataLayer` push
+- Tested with WordPress 7.1
 
 ## [1.0.2] - 2026-05-24
 Official release of plugin
