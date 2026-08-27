@@ -93,6 +93,15 @@
             'canonical-pages',
             array( $this, 'renderSettingsPage' )
         );
+
+        // Also expose the same settings page under the core "Settings" menu
+        add_options_page(
+            __( 'Canonical Pages', 'canonical-pages' ),
+            __( 'Canonical Pages', 'canonical-pages' ),
+            'manage_options',
+            'canonical-pages',
+            array( $this, 'renderSettingsPage' )
+        );
     }
 
     /**
