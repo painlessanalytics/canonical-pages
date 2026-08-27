@@ -74,27 +74,8 @@
      * type nests under this menu when the feature is enabled (via show_in_menu).
      */
     public function registerSettingsPage() {
-        add_menu_page(
-            __( 'Canonical Pages', 'canonical-pages' ),
-            __( 'Canonical Pages', 'canonical-pages' ),
-            'manage_options',
-            'canonical-pages',
-            array( $this, 'renderSettingsPage' ),
-            'dashicons-admin-links',
-            80
-        );
-
-        // Rename the auto-generated first submenu item to "Settings"
-        add_submenu_page(
-            'canonical-pages',
-            __( 'Canonical Pages Settings', 'canonical-pages' ),
-            __( 'Settings', 'canonical-pages' ),
-            'manage_options',
-            'canonical-pages',
-            array( $this, 'renderSettingsPage' )
-        );
-
-        // Also expose the same settings page under the core "Settings" menu
+        // Always expose the settings page under the core "Settings" menu, so the
+        // feature can be toggled even when the top-level menu (the CPT) is hidden.
         add_options_page(
             __( 'Canonical Pages', 'canonical-pages' ),
             __( 'Canonical Pages', 'canonical-pages' ),
@@ -102,6 +83,19 @@
             'canonical-pages',
             array( $this, 'renderSettingsPage' )
         );
+
+        // When enabled, the CPT owns the top-level "Canonical Pages" menu and emits
+        // "UTM Sources" and "Add New Source"; append "Settings" as the last item.
+        if( canonicalPages::getInstance()->isUtmVariantsEnabled() ) {
+            add_submenu_page(
+                'edit.php?post_type=' . CANONICAL_PAGES_UTM_CPT,
+                __( 'Canonical Pages Settings', 'canonical-pages' ),
+                __( 'Settings', 'canonical-pages' ),
+                'manage_options',
+                'canonical-pages',
+                array( $this, 'renderSettingsPage' )
+            );
+        }
     }
 
     /**
