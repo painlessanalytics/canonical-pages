@@ -6,6 +6,7 @@
 
 .distignore
 .gitignore
+CLAUDE.md
 /.*
 /composer.json
 /composer.lock

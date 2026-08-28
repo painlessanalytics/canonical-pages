@@ -3,9 +3,9 @@ Contributors: amandato, painlessanalytics
 Tags: canonical, canonicalization, canonical url, urls, seo
 Donate link: https://www.painlessanalytics.com
 Requires at least: 6.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,7 @@ A canonical URL is the preferred version of a webpage that search engines like G
 - Enable or Disable if page includes the `rel="canonical"` meta tag
 - Set a custom Canonical URL
 - Configure the Canonical URL for the _blog home page_
+- UTM Source Variants: map a list of slug values to a "This Link" page so the page also loads at additional paths (e.g. example.com/pizza/pepperoni/) while keeping the base page as the canonical URL
 
 === Supported SEO Plugins ===
 The following plugins work with this plugin:
@@ -81,6 +82,13 @@ Yes, for the SEO plugins supported. Please see the list of supported SEO plugins
 1. Canonical options during page editing
 
 == Changelog ==
+
+= 1.1.0 =
+Released on 2026-08-27
+
+Added the "UTM Source Variants" feature. Enable it under Settings > Canonical Pages to manage "Canonical UTM Sources" lists and map a list to any "This Link" page.
+
+Plugin tested with WordPress 7.1.
 
 = 1.0.2 =
 Released on 2026-05-24

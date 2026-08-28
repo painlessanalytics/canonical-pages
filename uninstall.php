@@ -19,7 +19,19 @@ class canonicalPagesUninstall
      */
     public function __construct()
     {
-        // Uninstall stuff here
+        global $wpdb;
+
+        // Remove the "UTM Source Variants" setting
+        delete_option( 'canonical_pages_utm_source_variants' );
+
+        // Remove any "Canonical UTM Sources" records and their meta
+        $post_ids = $wpdb->get_col(
+            $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_type = %s", 'cp_utm_sources' )
+        );
+
+        foreach ( $post_ids as $post_id ) {
+            wp_delete_post( (int) $post_id, true );
+        }
     }
 }
 
